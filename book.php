@@ -2,15 +2,15 @@
 	
 	 header("Access-Control-Allow-Origin: *");
 	 $server = "sql12.freemysqlhosting.net";
-$username = "sql12213686";
-$pass = "Y6WRfr392k";
-$db = "sql12213686";
+$username = "sql12215569";
+$pass = "aUqX5gwKKz";
+$db = "sql12215569";
 $connection = mysqli_connect($server, $username, $pass, $db);
 if ($_REQUEST) {
 $search_query = $_REQUEST['q'];
-$query_result = $connection->query("SELECT * FROM book WHERE title LIKE '%$search_query%' ");
+$query_result = $connection->query("SELECT * FROM booklist WHERE title LIKE '%$search_query%' ");
 }else{
-	$query_result = $connection->query("SELECT * FROM book");
+	$query_result = $connection->query("SELECT * FROM booklist");
 }
 $book = [];
 $count = 0;
